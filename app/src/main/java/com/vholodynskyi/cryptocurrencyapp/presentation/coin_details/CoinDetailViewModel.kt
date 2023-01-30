@@ -9,6 +9,7 @@ import com.vholodynskyi.cryptocurrencyapp.common.Constants.PARAM_COIN_ID
 import com.vholodynskyi.cryptocurrencyapp.common.Resource
 import com.vholodynskyi.cryptocurrencyapp.domain.use_case.get_coin.GetCoinUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.scopes.ActivityScoped
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject

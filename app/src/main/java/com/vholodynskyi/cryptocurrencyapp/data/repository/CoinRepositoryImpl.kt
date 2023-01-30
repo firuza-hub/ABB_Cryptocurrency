@@ -6,7 +6,7 @@ import com.vholodynskyi.cryptocurrencyapp.data.remote.dto.CoinDto
 import com.vholodynskyi.cryptocurrencyapp.domain.repository.CoinRepository
 import javax.inject.Inject
 
-class CoinRepositoryImpl @Inject constructor(
+class CoinRepositoryImpl @Inject constructor (
     private val api: CoinPaprikaApi
 ) : CoinRepository {
 

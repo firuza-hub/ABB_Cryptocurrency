@@ -4,9 +4,12 @@ import com.vholodynskyi.cryptocurrencyapp.common.Constants
 import com.vholodynskyi.cryptocurrencyapp.data.remote.CoinPaprikaApi
 import com.vholodynskyi.cryptocurrencyapp.data.repository.CoinRepositoryImpl
 import com.vholodynskyi.cryptocurrencyapp.domain.repository.CoinRepository
+import com.vholodynskyi.cryptocurrencyapp.domain.use_case.get_coin.GetCoinUseCase
+import com.vholodynskyi.cryptocurrencyapp.presentation.coin_details.CoinDetailViewModel
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -26,9 +29,4 @@ object AppModule {
             .create(CoinPaprikaApi::class.java)
     }
 
-    @Provides
-    @Singleton
-    fun provideCoinRepository(api: CoinPaprikaApi): CoinRepository {
-        return CoinRepositoryImpl(api)
-    }
 }
